@@ -39,7 +39,7 @@ public class BookController {
     public String getMyBooks(Model model) {
         List<MyBookList>list = myBookService.getAllMyBooks();
         model.addAttribute("book",list);
-        return "myBooks";
+        return "MyBooks";
     }
     @PostMapping("/save")
     public String addBook(@ModelAttribute Book book) {

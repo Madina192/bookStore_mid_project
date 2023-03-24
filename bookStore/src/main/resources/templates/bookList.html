@@ -22,7 +22,7 @@
           <a class="nav-link text-white " href="available_books">Available Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="#">My Books</a>
+          <a class="nav-link text-white " href="my_books">My Books</a>
         </li>
       </ul>
       <div>
@@ -32,10 +32,9 @@
   </div>
 </nav>
 <h1>Available Books</h1>
-<div class="container my-5">
+<div class="container my-5 col-md-6">
   <table class="table table-stripped table-hover">
     <thead>
-    <tr>
       <th scope="col">Id</th>
       <th scope="col">Name</th>
       <th scope="col">Author</th>
@@ -44,29 +43,21 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">20$</th>
-      <td colspan="2">30$</td>
-      <td>35$</td>
-      <td>40$</td>
+    <tr th:each="b :${book}">
+      <td th:text="${b.id}">1</td>
+      <td th:text="${b.name}">Robinson Crusoe</td>
+      <td th:text="${b.author}">Daniel Defoe</td>
+      <td th:text="${b.price}">15$</td>
+      <td>
+        <a class="btn btn-secondary btn-sm" th:href="@{/myList/{id}(id=${b.id})}">Add To My Books</a>
+        <a ><i class="fa-solid fa-trash"></i></a>
+        <a ><i class="fa-solid fa-pen-to-square"></i></a>
+      </td>
     </tr>
     </tbody>
   </table>
 </div>
+<script src="https://kit.fontawesome.com/c5e31761ca.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

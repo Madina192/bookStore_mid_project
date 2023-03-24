@@ -1,5 +1,4 @@
 package com.bookStore.bookStore.controller;
-
 import com.bookStore.bookStore.entity.Book;
 import com.bookStore.bookStore.entity.MyBookList;
 import com.bookStore.bookStore.service.BookService;
@@ -9,8 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.sql.Struct;
 import java.util.*;
 
 @Controller
@@ -49,11 +46,24 @@ public class BookController {
         service.save(book);
         return "redirect:/available_books";
     }
-    @RequestMapping("/mylist/{id}")
+    @RequestMapping("/myList/{id}")
     public String getMyList(@PathVariable("id") int id) {
         Book b=service.getBookById(id);
         MyBookList mb = new MyBookList(b.getId(), b.getName(), b.getAuthor(), b.getPrice());
         myBookService.saveMyBooks(mb);
         return "redirect:/my_books";
+    }
+
+    @RequestMapping("/editBook/{id}")
+    public String editBook(@PathVariable("id") int id, Model model){
+        Book b = service.getBookById(id);
+        model.addAttribute("book",b);
+        return "bookEdit";
+    }
+
+    @RequestMapping("/deleteBook/{id}")
+    public String deleteBook(@PathVariable("id") int id) {
+        service.deleteById(id);
+        return "redirect:/available_books";
     }
 }

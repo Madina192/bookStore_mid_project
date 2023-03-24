@@ -1,11 +1,9 @@
 package com.bookStore.bookStore.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "user_table")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,4 +55,5 @@ public class Book {
     public void setPrice(String price) {
         this.price = price;
     }
+
 }

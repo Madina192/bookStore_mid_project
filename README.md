@@ -10,7 +10,7 @@
 ## Login page
 ## If you have signed up, you can sign in by entering login and password:
 ![](book_9.png)
-## If you entered incorrect data? you'll ger an error:
+## If you entered incorrect data, you'll ger an error:
 ![](book_7.png)
 ## When you signed in it redirects you to personal page:
 ![](book_8.png)

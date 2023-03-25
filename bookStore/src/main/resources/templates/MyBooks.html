@@ -7,7 +7,7 @@
     <title>Book Store</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="/">Book Store</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,15 +26,21 @@
                 </li>
             </ul>
             <div>
+                <a href="login" class="nav-link text-white">Login</a>
+            </div>
+            <div>
+                <a href="register" class="nav-link text-white">Signup</a>
+            </div>
+            <div>
                 <a class="nav-link text-white " href="book_register">New Book Register</a>
             </div>
         </div>
     </div>
 </nav>
-<h1 class="text-center">My Books</h1>
+<h1 class="text-center mt-5 text-dark">My Books</h1>
 <div class="container my-5 col-md-6">
     <table class="table table-stripped table-hover">
-        <thead>
+        <thead class="text-primary">
         <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">Author</th>

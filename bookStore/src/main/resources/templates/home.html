@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="/">Book Store</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,19 +27,32 @@
                 </li>
             </ul>
             <div>
+                <a href="login" class="nav-link text-white">Login</a>
+            </div>
+            <div>
+                <a href="register" class="nav-link text-white">Signup</a>
+            </div>
+            <div>
                 <a class="nav-link text-white " href="book_register">New Book Register</a>
             </div>
         </div>
     </div>
 </nav>
-<div class="container text-center my-5">
-    <h1 class="h1">Welcome to new book store!</h1>
+<div class="container text-center my-5 position-relative">
+    <h1 class="h1">Welcome to Online Book Store!</h1>
+    <div>
+        <img src="/images/logo.jpg" alt="" class="logo">
+    </div>
     <div class="row">
         <div class="col">
-            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam, debitis dolorum ea eius est exercitationem fugiat incidunt, magnam mollitia nam qui
-                similique temporibus tenetur veniam. Aliquam deleniti ipsum molestiae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem commodi, cum deleniti
-                dicta dolore doloremque dolores doloribus eligendi enim eveniet exercitationem expedita, harum hic id illo maiores minima modi natus nulla omnis placeat quae quisquam quo tenetur vel velit.
-            </h6>
+            <h7>
+                The online bookstore application developed in Spring Boot is a web-based platform designed to enable users
+                to browse and purchase books online. The application provides a user-friendly interface that allows customers to
+                add new books and read them. Registered users can create and manage their profiles, which store their personal information.
+                The online bookstore application is built using the Spring Boot framework, which provides a robust and scalable platform
+                for developing enterprise-grade applications. The application leverages various Spring Boot features, including
+                Spring Data, Spring Security, and Spring MVC, to implement functionality such as database connectivity, security, and web services.
+            </h7>
         </div>
         <div class="col">
             <img src="/images/book.jpg" width="500px" border-radius="10px" class="img">

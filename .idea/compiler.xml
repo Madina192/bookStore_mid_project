@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bookStore" />
+        <module name="bagShop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bookStore" target="17" />
+      <module name="bagShop" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="bookStore" options="-parameters" />
+      <module name="bagShop" options="-parameters" />
     </option>
   </component>
 </project>
